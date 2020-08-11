@@ -65,7 +65,7 @@ class App extends Component {
     )
   }
 
-  //custom defined the function cannot set in render funciton
+  //custom defined the function cannot set in render funciton....
   render() {
     //console.log(this.state.todos)
     return (
