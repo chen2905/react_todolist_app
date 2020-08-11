@@ -12,7 +12,7 @@ class App extends Component {
     todos: []
   }
   componentDidMount() {
-    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=9')
+    axios.get('todos?_limit=9')
       .then(
         //res=>console.log(res.data)
         res => {
@@ -37,7 +37,7 @@ class App extends Component {
   }
   deleteTodo = (id) => {
     // console.log(id)
-    axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+    axios.delete(`todos/${id}`)
       .then(res => this.setState(
         {
 
@@ -49,7 +49,7 @@ class App extends Component {
   }
 
   addTodo = (title) => {
-    axios.post('https://jsonplaceholder.typicode.com/todos', {
+    axios.post('todos', {
       title,
       completed: false
     }).then(res => this.setState(
